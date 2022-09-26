@@ -29,8 +29,8 @@
     "scripts": {
         "build": "npx rimraf ./dist && npx tsc --project ./tsconfig.build.json",
         "lint": "npx eslint --ext .ts .",
-        "prettier:check": "npx prettier --check --ignore-path ./.gitignore .",
-        "prettier:write": "npx prettier --write --ignore-path ./.gitignore .",
+        "prettier:check": "npx prettier --check",
+        "prettier:write": "npx prettier --write",
         "test": "npm run lint --silent && mocha"
     },
     "eslintConfig": {
