@@ -31,7 +31,7 @@ Configuration for ESLint, Prettier, and Mocha is included within `package.json`.
 1. Collapse the template's commit history into a new initial commit:
 
    ```sh
-   git reset --hard $(git commit-tree FETCH_HEAD^{tree} -m 'chore: initial commit')
+   git reset --hard $(git commit-tree FETCH_HEAD^{tree} -m 'Initial commit')
    ```
 
 1. Add package information to `package.json`, and change any configurations as
@@ -44,4 +44,5 @@ Configuration for ESLint, Prettier, and Mocha is included within `package.json`.
    ```
 
 1. Once files are added to the `src` and `test` directories, the `.gitkeep`
-   files may be deleted.
+   files may be deleted. Or, if using a different directory structure, the
+   existing directories can be deleted altogether.
