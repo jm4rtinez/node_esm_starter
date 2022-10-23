@@ -17,21 +17,28 @@
         "dist",
         "src"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "type": "module",
     "sideEffects": false,
     "engines": {
-        "node": "14.* || 16.* || >= 18.*"
+        "node": "16.* || >= 18.*"
     },
     "exports": {
         "./package.json": "./package.json"
     },
     "scripts": {
-        "build": "npm run clean && npx tsc --project ./tsconfig.build.json",
         "clean": "npx rimraf ./dist",
         "lint": "npx eslint --ext .ts .",
-        "prettier:check": "npx prettier --check .",
-        "prettier:write": "npx prettier --write .",
-        "test": "npm run lint && npm run prettier:check && npx mocha"
+        "prettier:check": "npx prettier --check --ignore-path ./.gitignore .",
+        "prettier:write": "npx prettier --write --ignore-path ./.gitignore .",
+        "pretest": "npm run lint && npm run prettier:check",
+        "test": "npx mocha",
+        "prebuild": "npm run clean",
+        "build": "npx tsc --project ./tsconfig.build.json",
+        "prepublishOnly": "npm run build:dist",
+        "postpublish": "npm run clean"
     },
     "devDependencies": {
         "@types/chai": "^4.3.1",
@@ -111,6 +118,7 @@
                     "tabWidth": 2
                 }
             }
-        ]
+        ],
+        "proseWrap": "always"
     }
 }

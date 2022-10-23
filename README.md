@@ -4,11 +4,11 @@ A starter project template for TypeScript and ESModules on NodeJS
 
 This repository provides:
 
-- TypeScript for development
-- ESLint for linting
-- Prettier for formatting
-- Mocha and Chai for testing
-- The Apache 2.0 License 
+-   TypeScript for development
+-   ESLint for linting
+-   Prettier for formatting
+-   Mocha and Chai for testing
+-   The Apache 2.0 License
 
 Configuration for ESLint, Prettier, and Mocha is included within `package.json`.
 
@@ -16,32 +16,32 @@ Configuration for ESLint, Prettier, and Mocha is included within `package.json`.
 
 1. Create and initialize a local repository:
 
-   ```sh
-   mkdir your_repository_name
-   cd your_repository_name
-   git init
-   ```
+    ```sh
+    mkdir your_repository_name
+    cd your_repository_name
+    git init
+    ```
 
 1. Fetch this repository:
 
-   ```sh
-   git fetch --depth=1 -n https://github.com/jm4rtinez/node_esm_starter.git
-   ```
+    ```sh
+    git fetch --depth=1 -n https://github.com/jm4rtinez/node_esm_starter.git
+    ```
 
 1. Collapse the template's commit history into a new initial commit:
 
-   ```sh
-   git reset --hard $(git commit-tree FETCH_HEAD^{tree} -m 'Initial commit')
-   ```
+    ```sh
+    git reset --hard $(git commit-tree FETCH_HEAD^{tree} -m 'Initial commit')
+    ```
 
 1. Add package information to `package.json`, and change any configurations as
    desired.
 
 1. Install development dependencies:
 
-   ```sh
-   npm install
-   ```
+    ```sh
+    npm install
+    ```
 
 1. Once files are added to the `src` and `test` directories, the `.gitkeep`
    files may be deleted. Or, if using a different directory structure, the
