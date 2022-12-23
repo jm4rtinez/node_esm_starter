@@ -30,7 +30,7 @@
     },
     "scripts": {
         "clean": "npx rimraf ./dist",
-        "lint": "npx eslint --ext .ts .",
+        "lint": "npx eslint --ext .ts --max-warnings 0 .",
         "prettier:check": "npx prettier --check --ignore-path ./.gitignore .",
         "prettier:write": "npx prettier --write --ignore-path ./.gitignore .",
         "pretest": "npm run lint && npm run prettier:check",
@@ -54,7 +54,7 @@
         "prettier-plugin-organize-imports": "^3.1.1",
         "rimraf": "^3.0.2",
         "ts-node": "^10.8.2",
-        "typescript": "~4.8"
+        "typescript": "~4.9"
     },
     "eslintConfig": {
         "env": {
@@ -79,18 +79,15 @@
             "@typescript-eslint"
         ],
         "rules": {
-            "@typescript-eslint/no-explicit-any": [
-                "off"
-            ],
             "@typescript-eslint/no-namespace": [
                 "off"
             ],
             "quotes": [
-                "warn",
+                "error",
                 "double"
             ],
             "semi": [
-                "warn",
+                "error",
                 "always"
             ]
         }
@@ -120,5 +117,9 @@
             }
         ],
         "proseWrap": "always"
+    },
+    "volta": {
+        "node": "18.12.1",
+        "npm": "9.1.3"
     }
 }
